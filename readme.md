@@ -33,3 +33,46 @@ let re: RegExp = /\w+/g
 ```
 
 ## Arrays and Objects
+let stringArr = ['aff', 'stas', 'hu']
+let guitars = ['Strat', 'tele', 9]
+let mixedData = ['EVH', 1984, true]
+
+stringArr[0]='aff'
+stringArr.push('Andini')
+
+guitars[0] = 1984
+guitars.unshift(89)
+
+// objects
+
+let myObj: object
+
+interface Guitarist {
+    name: string,
+    active: boolean,
+    albums: (string | number )[]
+}
+
+let evh: Guitarist = {
+    name: 'Eddie',
+    active: false,
+    albums: [1984, 'whatever', 96321]
+}
+
+const greetGuitarist = (guitarist: Guitarist) => {
+    return `Hello ${guitarist.name}!`
+}
+
+console.log(greetGuitarist(evh));
+
+// enums
+
+enum Grade {
+    U,
+    D,
+    C,
+    B,
+    A
+}
+
+console.log(Grade.U);
